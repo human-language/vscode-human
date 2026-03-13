@@ -17,7 +17,7 @@
   ],
   "repository": {
     "comment": {
-      "match": "(#)(.*)$",
+      "match": "^\\s*(#)(.*)$",
       "captures": {
         "1": { "name": "punctuation.definition.comment.hmn" },
         "2": { "name": "comment.line.number-sign.hmn" }

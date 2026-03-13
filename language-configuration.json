@@ -9,8 +9,8 @@
     { "open": "\"", "close": "\"", "notIn": ["string", "comment"] }
   ],
   "indentationRules": {
-    "increaseIndentPattern": "^\\s*(AGENT|CONSTRAINTS|FLOW|TEST)\\b",
-    "decreaseIndentPattern": "^\\s*$"
+    "increaseIndentPattern": "^\\s*(AGENT|CONSTRAINTS|FLOW|TEST)\\b.*$",
+    "decreaseIndentPattern": "^\\S"
   },
   "folding": {
     "indentation": true
