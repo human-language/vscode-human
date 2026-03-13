@@ -1,0 +1,18 @@
+{
+  "comments": {
+    "lineComment": "#"
+  },
+  "brackets": [
+    ["\"", "\""]
+  ],
+  "autoClosingPairs": [
+    { "open": "\"", "close": "\"", "notIn": ["string", "comment"] }
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": "^\\s*(AGENT|CONSTRAINTS|FLOW|TEST)\\b",
+    "decreaseIndentPattern": "^\\s*$"
+  },
+  "folding": {
+    "indentation": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "human-language",
+  "displayName": "Human Language",
+  "description": "Syntax highlighting and diagnostics for .hmn files",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:hmn"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "hmn",
+        "aliases": ["Human", "hmn"],
+        "extensions": [".hmn"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hmn",
+        "scopeName": "source.hmn",
+        "path": "./syntaxes/hmn.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "Human",
+      "properties": {
+        "human.hmnPath": {
+          "type": "string",
+          "default": "hmn",
+          "description": "Path to the hmn CLI binary."
+        },
+        "human.validateOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Run hmn validate on save."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}
